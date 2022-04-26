@@ -8,7 +8,7 @@
 // snippet-sourcetype:[full-example]
 // snippet-sourcedate:[ ]
 // snippet-sourceauthor:[AWS]
-// snippet-start:[dynamodb.java.codeexample.DynamoDBLocalFixture] 
+// snippet-start:[dynamodb.java.codeexample.DynamoDBLocalFixture]
 /**
  * Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
@@ -26,8 +26,6 @@
 
 package com.amazonaws.services.dynamodbv2;
 
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.dynamodbv2.local.embedded.DynamoDBEmbedded;
 import com.amazonaws.services.dynamodbv2.local.main.ServerRunner;
 import com.amazonaws.services.dynamodbv2.local.server.DynamoDBProxyServer;
@@ -35,7 +33,7 @@ import com.amazonaws.services.dynamodbv2.model.ListTablesResult;
 
 /**
  * This class demonstrates how to use DynamoDB Local as a test fixture.
- * 
+ *
  * @author Alexander Patrikalakis
  */
 public class DynamoDBLocalFixture {
@@ -44,7 +42,7 @@ public class DynamoDBLocalFixture {
         try {
             // Create an in-memory and in-process instance of DynamoDB Local
             // that skips HTTP
-            dynamodb = DynamoDBEmbedded.create();
+            dynamodb = (AmazonDynamoDB) DynamoDBEmbedded.create();
             // use the DynamoDB API with DynamoDBEmbedded
             listTables(dynamodb.listTables(), "DynamoDB Embedded");
         }
@@ -84,4 +82,4 @@ public class DynamoDBLocalFixture {
     }
 }
 
-// snippet-end:[dynamodb.java.codeexample.DynamoDBLocalFixture] 
+// snippet-end:[dynamodb.java.codeexample.DynamoDBLocalFixture]

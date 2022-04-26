@@ -8,7 +8,7 @@
 // snippet-sourcetype:[full-example]
 // snippet-sourcedate:[ ]
 // snippet-sourceauthor:[AWS]
-// snippet-start:[dynamodb.java.codeexample.DocumentAPITableExample] 
+// snippet-start:[dynamodb.java.codeexample.DocumentAPITableExample]
 /**
  * Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
@@ -28,6 +28,7 @@ package com.amazonaws.codesamples.document;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
@@ -151,4 +152,4 @@ public class DocumentAPITableExample {
 
 }
 
-// snippet-end:[dynamodb.java.codeexample.DocumentAPITableExample] 
+// snippet-end:[dynamodb.java.codeexample.DocumentAPITableExample]
